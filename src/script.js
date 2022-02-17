@@ -81,7 +81,7 @@ window.onload = () => {
   });
 
   document.getElementById('canvas-input').addEventListener('change', ({ target: { value } }) => {
-    if (value >= 300 && value <= 600) resizeCanvas(value);
+    if (value >= 200 && value <= 600) resizeCanvas(value);
   });
 
   document.getElementById('pixel-input').addEventListener('change', ({ target: { value } }) => {

@@ -64,11 +64,7 @@ footer.toolbar {
   color: rgb(30 30 30);
 }
 
-.toolbar > div {
-  align-items: center;
-  display: flex;
-}
-
+.toolbar > div,
 .toolbar label {
   align-items: center;
   display: flex;
@@ -112,6 +108,7 @@ footer.toolbar {
   display: flex;
   flex-grow: 10;
   justify-content: center;
+  position: relative;
 }
 
 .canvas {
@@ -123,7 +120,16 @@ footer.toolbar {
 
 .pixel {
   background-color: white;
+  transition: background-color 0.25s ease;
   user-select: none;
+}
+
+.about {
+  bottom: 10px;
+  font-size: 0.8rem;
+  left: 0;
+  padding: 0 40px;
+  position: absolute;
 }
 
 .material-icons {
