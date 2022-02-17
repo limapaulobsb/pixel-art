@@ -70,7 +70,7 @@ footer.toolbar {
   display: flex;
 }
 
-.toolbar .min-max {
+.range-text {
   font-size: 0.6rem;
 }
 
@@ -84,11 +84,6 @@ footer.toolbar {
   padding: 0 5px;
 }
 
-.default-button:active,
-.tool-button:active {
-  box-shadow: 1px 1px 0 0 black inset;
-}
-
 .default-button {
   font-family: inherit;
   margin-left: 40px;
@@ -99,7 +94,12 @@ footer.toolbar {
   width: 30px;
 }
 
-.selected {
+.default-button:active,
+.tool-button:active {
+  box-shadow: 1px 1px 0 0 black inset;
+}
+
+.tool-button.selected {
   background-color: rgb(150 150 150);
 }
 
@@ -124,7 +124,7 @@ footer.toolbar {
   user-select: none;
 }
 
-.about {
+.about-text {
   bottom: 10px;
   font-size: 0.8rem;
   left: 0;

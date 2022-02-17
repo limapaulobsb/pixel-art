@@ -1,4 +1,9 @@
+// Start Global Variables
+
 let tool = 'pen';
+
+// End Global Variables
+// Start Function Declarations
 
 function createPixels(n) {
   const canvasElem = document.getElementById('main-canvas');
@@ -14,12 +19,12 @@ function createPixels(n) {
 function removePixels() {
   const canvasElem = document.getElementById('main-canvas');
   while (canvasElem.hasChildNodes()) {
-    canvasElem.removeChild(canvasElem.firstChild);
+    canvasElem.removeChild(canvasElem.firstElementChild);
   }
 }
 
 function fillPixel(target) {
-  const color = document.getElementById('color-picker').value;
+  const color = document.getElementById('color-input').value;
   if (tool === 'pen') target.style.backgroundColor = color;
   else if (tool === 'rubber') target.style.backgroundColor = 'white';
 }
@@ -49,6 +54,9 @@ function selectTool(target) {
   tool = target.name;
 }
 
+// ===> End Function Declarations <===
+// ===> Start Onload Events and Listeners setup <===
+
 window.onload = () => {
   createPixels(40);
 
@@ -75,7 +83,7 @@ window.onload = () => {
     }
   });
 
-  document.getElementById('color-picker').addEventListener('input', ({ target }) => {
+  document.getElementById('color-input').addEventListener('input', ({ target }) => {
     const codeElem = document.getElementById('color-code');
     codeElem.innerHTML = `&ensp;${target.value}`;
   });
@@ -94,3 +102,5 @@ window.onload = () => {
   document.getElementById('clear-canvas').addEventListener('click', clearCanvas);
   document.getElementById('toggle-grid').addEventListener('click', toggleGrid);
 };
+
+// ===> End Onload Events and Listeners setup <===

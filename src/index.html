@@ -13,8 +13,8 @@
       <header class="toolbar">
         <h1>Pixel Art</h1>
         <div>
-          <label for="color-picker">
-            <input type="color" id="color-picker" value="#ffff00" />
+          <label for="color-input">
+            <input type="color" id="color-input" value="#ffff00" />
             <span id="color-code">&ensp;#FFFF00</span>
           </label>
           <button type="button" class="tool-button selected" name="pen">
@@ -28,7 +28,7 @@
       </header>
       <div class="canvas-background">
         <div class="canvas" id="main-canvas"></div>
-        <span class="about">
+        <span class="about-text">
           Project started during the fundamentals module of the Web Development course at
           <a href="https://www.betrybe.com/" target="_blank">Trybe</a>. Check out this and other
           projects on my <a href="https://github.com/limapaulobsb" target="_blank">GitHub</a>!
@@ -42,12 +42,12 @@
         <label for="canvas-input">
           <span>Canvas size:&ensp;</span>
           <input type="number" id="canvas-input" min="200" max="600" step="10" value="400" />
-          <span class="min-max">&ensp;(200-600)</span>
+          <span class="range-text">&ensp;(200-600)</span>
         </label>
         <label for="pixel-input">
           <span>Pixel count:&ensp;</span>
           <input type="number" id="pixel-input" min="10" max="80" value="40" />
-          <span class="min-max">&ensp;(10-80)</span>
+          <span class="range-text">&ensp;(10-80)</span>
         </label>
       </footer>
     </main>
