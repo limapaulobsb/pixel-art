@@ -7,8 +7,8 @@ function createPixels(n) {
     newPixel.className = 'pixel';
     canvasElem.appendChild(newPixel);
   }
-  canvasElem.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
-  canvasElem.style.gridTemplateRows = `repeat(${n}, 1fr)`;
+  canvasElem.style.gridTemplateColumns = `repeat(${n}, auto)`;
+  canvasElem.style.gridTemplateRows = `repeat(${n}, auto)`;
 }
 
 function removePixels() {
@@ -24,15 +24,15 @@ function fillPixel(target) {
   else if (tool === 'rubber') target.style.backgroundColor = 'white';
 }
 
+function clearCanvas() {
+  const pixelElems = document.querySelectorAll('.pixel');
+  pixelElems.forEach((el) => (el.style.backgroundColor = 'white'));
+}
+
 function resizeCanvas(value) {
   const canvasElem = document.getElementById('main-canvas');
   canvasElem.style.height = `${value}px`;
   canvasElem.style.width = `${value}px`;
-}
-
-function clearCanvas() {
-  const pixelElems = document.querySelectorAll('.pixel');
-  pixelElems.forEach((el) => (el.style.backgroundColor = 'white'));
 }
 
 function toggleGrid() {
@@ -42,20 +42,31 @@ function toggleGrid() {
   else canvasElem.style.gap = '0';
 }
 
+function selectTool(target) {
+  const toolElem = document.querySelector('.selected');
+  toolElem.classList.remove('selected');
+  target.classList.add('selected');
+  tool = target.name;
+}
+
 window.onload = () => {
   createPixels(40);
 
   let isMouseDown = false;
 
-  document.addEventListener('mousedown', (event) => {
-    if (event.button === 0) {
+  document.addEventListener('mousedown', ({ button, target }) => {
+    if (button === 0) {
       isMouseDown = true;
-      if (event.target.matches('.pixel')) fillPixel(event.target);
+      if (target.matches('.pixel')) fillPixel(target);
     }
   });
 
-  document.addEventListener('mouseup', (event) => {
-    if (event.button === 0) isMouseDown = false;
+  document.addEventListener('mouseup', ({ button, target }) => {
+    if (button === 0) {
+      isMouseDown = false;
+      if (target.matches('.tool-button')) selectTool(target);
+      else if (target.parentNode.matches('.tool-button')) selectTool(target.parentNode);
+    }
   });
 
   document.addEventListener('mouseover', ({ target }) => {
@@ -66,7 +77,7 @@ window.onload = () => {
 
   document.getElementById('color-picker').addEventListener('input', ({ target }) => {
     const codeElem = document.getElementById('color-code');
-    codeElem.innerHTML = `&ensp;${target.value.toUpperCase()}`;
+    codeElem.innerHTML = `&ensp;${target.value}`;
   });
 
   document.getElementById('canvas-input').addEventListener('change', ({ target: { value } }) => {
@@ -80,8 +91,6 @@ window.onload = () => {
     }
   });
 
-  document.getElementById('pen-tool').addEventListener('click', () => (tool = 'pen'));
-  document.getElementById('rubber-tool').addEventListener('click', () => (tool = 'rubber'));
   document.getElementById('clear-canvas').addEventListener('click', clearCanvas);
   document.getElementById('toggle-grid').addEventListener('click', toggleGrid);
 };
