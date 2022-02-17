@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="toolbar">
+        <h1>Pixel Art</h1>
+        <div>
+          <label for="color-picker">
+            <input type="color" id="color-picker" value="#ffff00" />
+            <span id="color-code">&ensp;#FFFF00</span>
+          </label>
+          <button type="button" class="svg-button" id="pen-tool">
+            <i class="material-icons">edit</i>
+          </button>
+          <button type="button" class="svg-button" id="rubber-tool">
+            <i class="material-icons">auto_fix_normal</i>
+          </button>
+          <button type="button" class="default-button" id="clear-canvas">Clear canvas</button>
+        </div>
+      </header>
+      <div class="canvas-background">
+        <div class="canvas" id="main-canvas"></div>
+      </div>
+      <footer class="toolbar">
+        <label for="toggle-grid">
+          <input type="checkbox" id="toggle-grid" />
+          <span>&ensp;Show grid</span>
+        </label>
+        <label for="canvas-input">
+          <span>Canvas size:&ensp;</span>
+          <input type="number" id="canvas-input" min="300" max="600" step="10" value="400" />
+          <span class="min-max">&ensp;(300-600)</span>
+        </label>
+        <label for="pixel-input">
+          <span>Pixel count:&ensp;</span>
+          <input type="number" id="pixel-input" min="10" max="80" value="40" />
+          <span class="min-max">&ensp;(10-80)</span>
+        </label>
+      </footer>
+    </main>
+    <footer></footer>
+  </body>
+  <script type="module" src="./script.js"></script>
+</html>
