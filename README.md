@@ -1,61 +1,57 @@
-# Projeto Pixel Art
+# Project Pixel Art
 
-*Data de criação: 09/03/2021*
+[Live demo](https://phlima.com/projects/pixel-art)
 
-*Última atualização: fevereiro de 2022*
+Last updated: October 2023
 
-<p align="center"><img width="33%" src="https://raw.githubusercontent.com/limapaulobsb/pixel-art/main/Screenshot.png" alt="Project Screenshot" /></p>
+## Context
 
-<p align="center"><a href="http://phlima.com/projects/pixel-art" target="_blank" >www.phlima.com/projects/pixel-art</a></p>
+This was one of the first projects in the Fundamentals module of the [Trybe](https://www.betrybe.com/) Web Development course. The proposal for a simple "pixel" art application was excellent for practicing and improving fundamental concepts of the languages used.
 
-## Contexto
-Este foi um dos primeiros projetos do módulo Fundamentos do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/). A proposta de uma aplicação simples de pintura de "pixels" foi excelente para praticar e aprimorar conceitos básicos e fundamentais das linguagens usadas.
-
-## Conhecimentos utilizados
+## Stack used
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
 
-Destaque para alguns métodos e propriedades muito úteis:
+## Running locally
 
-[Document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)  
-[Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)  
-[Document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)  
-[Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)  
-[Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)  
-[Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)  
-[Element.matches()](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches)  
-[Element.firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild)  
-[EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)  
-[Node.hasChildNodes()](https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes)  
-[Node.appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)  
-[Node.removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)  
-
-## Executando o projeto localmente
-
-1. Clone o repositório
+1. Clone the repository
 
 ```
-git clone git@github.com:limapaulobsb/todo-list.git
+git clone git@github.com:limapaulobsb/pixel-art.git
 ```
 
-2. Entre na pasta do repositório que você acabou de clonar
+2. Change to the newly created folder
 
 ```
-cd todo-list
+cd pixel-art
 ```
 
-3. Instale as dependências
+3. Install dependencies
 
 ```
 npm install
 ```
 
-## Para o futuro
+## Linters
 
-Mantenho meus projetos em constante atualização. Qualquer feedback será muito bem-vindo.
+- [ESlint](https://eslint.org/)
 
-## Entre em contato
+```
+npm run lint
+```
 
-Qualquer dúvida ou sugestão envie para limapaulobsb@gmail.com
+- [Stylelint](https://stylelint.io/)
+
+```
+npm run lint:style
+```
+
+## Lisence
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+
+Any feedback will be very welcome. Feel free to send questions or suggestions to limapaulobsb@gmail.com

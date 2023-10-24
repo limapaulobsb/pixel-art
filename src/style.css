@@ -7,12 +7,16 @@
 }
 
 body {
-  background-image: url('./assets/background.jpeg');
+  background-image: url('../public/assets/background.jpeg');
   background-position: center;
   background-size: cover;
   font-family: 'Roboto Mono', monospace;
   min-height: 100vh;
   padding-top: 40px;
+}
+
+h1 {
+  color: rgb(30 30 30);
 }
 
 input[type='color'] {
@@ -60,18 +64,10 @@ footer.toolbar {
   justify-content: space-evenly;
 }
 
-.toolbar > h1 {
-  color: rgb(30 30 30);
-}
-
 .toolbar > div,
 .toolbar label {
   align-items: center;
   display: flex;
-}
-
-.range-text {
-  font-size: 0.6rem;
 }
 
 .default-button,
@@ -101,6 +97,10 @@ footer.toolbar {
 
 .tool-button.selected {
   background-color: rgb(150 150 150);
+}
+
+.range-text {
+  font-size: 0.6rem;
 }
 
 .canvas-background {

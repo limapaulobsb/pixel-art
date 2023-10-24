@@ -1,27 +1,25 @@
 {
   "name": "pixel-art",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
-  "type":"module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/limapaulobsb/pixel-art.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/limapaulobsb/pixel-art/issues"
   },
-  "homepage": "https://github.com/limapaulobsb/pixel-art#readme",
+  "homepage": "https://phlima.com/projects/pixel-art",
+  "author": "Paulo Henrique Lima <limapaulobsb@gmail.com> (https://phlima.com/)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:style": "stylelint '**/*.{css,ts,tsx}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
-    "eslint": "^8.9.0",
-    "stylelint": "^14.5.1",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^25.0.0"
+    "eslint": "^8.52.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
